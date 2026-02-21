@@ -1,0 +1,47 @@
+.card {
+   width: 420px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   padding: 16px;
+   border-left: 8px solid rgb(3, 157, 3);
+   border-radius: 15px;
+   margin: 10px auto;
+   position: relative;
+}
+
+.icons {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px 0;
+}
+
+.icons div:nth-child(2) a {
+   all: unset;
+   cursor: pointer;
+}
+
+.icons svg {
+   font-size: 30px;
+   margin: 5px 0;
+   transition: all 0.5s;
+   cursor: pointer;
+}
+
+/* Hover effect for each icon: */
+.delete svg:hover {
+   color: rgb(255, 3, 3);
+   transform: scale(1.2);
+}
+
+.edit svg:hover {
+   color: rgb(7, 7, 255);
+   transform: scale(1.2);
+}
+.favorite svg:hover {
+   color: #ff54b2;
+   transform: scale(1.2);
+}

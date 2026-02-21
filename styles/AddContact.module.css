@@ -1,0 +1,102 @@
+/* this style we use in two components 1: in add page, 2: in edit page, because both styles as same. */
+.container {
+   margin-top: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container form {
+   width: 300px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 10px;
+   color: rgb(57, 57, 57);
+   font-size: 14px;
+}
+
+/* direct child of form element */
+.container form > input{
+   all: unset;
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+/* password from /auth/login page */
+.container .password input{
+   all: unset;
+}
+
+.container .password{
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container .password svg{
+   cursor: pointer;
+}
+
+.container select {
+   all: unset;
+   border: 1px solid gray;
+   border-radius: 5px;
+   padding: 10px;
+}
+
+.container button {
+   all: unset;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: rgb(3, 157, 3);
+   font-weight: 600;
+   color: white;
+   display: flex;          
+   justify-content: center;
+   align-items: center;
+   gap: 8px;
+}
+
+.container button:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 69);
+}
+
+/* notRegistered class from /auth/login page */
+.notRegistered{
+   text-align: center;
+   color: gray;
+}
+
+.notRegistered a{
+   text-decoration: none;
+   color: rgb(3, 157, 3);
+}
+
+/* when we clicked on add contact btn until we receive response, btn become disabled */
+.container button:disabled {
+   background-color: gray;
+   cursor: not-allowed;
+   opacity: 0.6;
+}
+
+
+/* this animation is for our loading icon: */
+.spin{
+   animation: spinner 1s linear  infinite;
+}
+
+@keyframes spinner {
+   0%{
+      transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+
