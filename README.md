@@ -47,10 +47,10 @@ This project demonstrates real-world CRUD operations, authentication, protected 
 
 ## 📸 Screenshots
 
-![Login](screenshots/login.png)
-![Dashboard](screenshots/dashboard.png)
-![AddContact](screenshots/add.png)
-![Favorite](screenshots/favorite.png)
+![Login](public/screenshots/login.png)
+![Dashboard](public/screenshots/dashboard.png)
+![AddContact](public/screenshots/add.png)
+![Favorite](public/screenshots/favorite.png)
 
 ---
 
@@ -79,4 +79,5 @@ Deployment best practices
 ---
 
 ## 👨‍💻 Author
+
 Developed by [muhammad roshani](https://github.com/MuhammadRoshani)
