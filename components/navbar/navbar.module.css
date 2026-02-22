@@ -11,12 +11,12 @@
    gap: 50px;
 }
 
-.menu a {
+.menu a,.menu button {
    all: unset;
    cursor: pointer;
 }
 
-.menu a svg {
+.menu a svg,.menu button svg {
    font-size: 20px;
    margin-right: 5px;
    vertical-align: sub;

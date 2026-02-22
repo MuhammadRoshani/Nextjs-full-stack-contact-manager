@@ -14,7 +14,11 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
   // logoutHandler func:
   const logoutHandler = async () => {
     try {
-      const res = await fetch("/api/auth/logout");
+      const res = await fetch("/api/auth/logout", {
+        method: "GET",
+        // this code means browser always, must send cookies with our request.
+        credentials: "include",
+      });
       const data = await res.json();
 
       if (res.status === 200) {
@@ -36,14 +40,16 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
           {/* first link: */}
           {isAuthenticated ? (
             // logout:
-            <Link
-              href="/"
+            // Logout is an action, not a navigation route, so we use button instead of Link, for fix our bug in logout section.
+            <button
               onClick={logoutHandler}
               // if we go to this route below give active style else if we were not this route do nothing better say that give empty string class😂.
-              className={route === "/auth/login" ? styles.active : ""}
+              // We don't apply "active" class because it's not a page route:
+
+              // className={route === "/auth/login" ? styles.active : ""}
             >
               <CgLogOut /> Logout
-            </Link>
+            </button>
           ) : (
             // login:
             <Link
