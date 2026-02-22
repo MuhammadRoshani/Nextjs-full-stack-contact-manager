@@ -23,7 +23,7 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
 
       if (res.status === 200) {
         toast.success(data.message);
-        setIsAuthenticated(false);
+        // setIsAuthenticated(false);
         window.location.href = "/auth/login";
       } else {
         toast.error("Logout failed");
