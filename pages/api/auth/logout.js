@@ -15,14 +15,12 @@ export default async function handler(req, res) {
         httpOnly: true,
         // it means / in all of the site page can access and use.
         path: "/",
-        // all browser with no doubt removed cookies
-        expires: new Date(0),
         // expire of cookie, according to seconds (0 remove).
-        maxAge: 0,
+        maxAge: -1,
         // prevent to CSRF attacks.
         sameSite: "strict",
         // for more security
-        secure: process.env.NODE_ENV === "production",
+        secure: true,
       }),
     );
     return res.status(200).json({ message: "user logged out successfully" });
