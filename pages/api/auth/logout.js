@@ -20,8 +20,9 @@ export default async function handler(req, res) {
         maxAge: 0,
         // prevent to CSRF attacks.
         sameSite: "lax",
-        // for more security
+        // for more security always https protocol.
         secure: true,
+        domain: ".vercel.app",
       }),
     );
     return res.status(200).json({ message: "user logged out successfully" });
