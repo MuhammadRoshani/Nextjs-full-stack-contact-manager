@@ -7,7 +7,7 @@ This project demonstrates real-world CRUD operations, authentication, protected 
 
 ## 🌐 Live Demo
 
-🔗 **Live Demo:** [View Project](https://nextjs-full-stack-contact-manager-89v6xjsx5.vercel.app/)  
+🔗 **Live Demo:** [View Project](https://nextjs-full-stack-contact-manager.vercel.app)  
 🔗 **GitHub Repository:** [Source Code](https://github.com/MuhammadRoshani/Nextjs-full-stack-contact-manager)
 
 ---
