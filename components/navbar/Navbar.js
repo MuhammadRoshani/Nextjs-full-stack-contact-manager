@@ -24,7 +24,7 @@ export default function Navbar({ isAuthenticated, setIsAuthenticated }) {
       if (res.status === 200) {
         toast.success(data.message);
         setIsAuthenticated(false);
-        router.replace("/auth/login");
+        window.location.href = "/auth/login";
       } else {
         toast.error("Logout failed");
       }
