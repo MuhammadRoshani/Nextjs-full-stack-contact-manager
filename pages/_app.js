@@ -11,7 +11,9 @@ export default function App({ Component, pageProps }) {
   // we use this useEffect for show (dashboard) and (add contacts) page on navbar or not(after login successful we must show).
   useEffect(() => {
     const isAuth = async () => {
-      const res = await fetch("/api/auth/status");
+      const res = await fetch("/api/auth/status",{
+        credentials: "include"
+      });
       if (res.status === 401) {
         setIsAuthenticated(false);
       } else {
