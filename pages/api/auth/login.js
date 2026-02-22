@@ -85,7 +85,7 @@ export default async function handler(req, res) {
         // expire of cookie, according to seconds(2hour).
         maxAge: 60 * 60 * 2,
         // prevent to CSRF attacks.
-        sameSite: "strict",
+        sameSite: "lax",
         // for more security
         secure: process.env.NODE_ENV === "production",
       }),

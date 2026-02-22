@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         // prevent to CSRF attacks.
         sameSite: "lax",
         // for more security always https protocol.
-        secure: true,
+        secure: process.env.NODE_ENV === "production",
       }),
     );
     return res.status(200).json({ message: "user logged out successfully" });
