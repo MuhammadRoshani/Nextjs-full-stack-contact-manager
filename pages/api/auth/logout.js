@@ -24,6 +24,9 @@ export default async function handler(req, res) {
         secure: process.env.NODE_ENV === "production",
       }),
     );
+    // force browser not to cache anything (SSR edge issues)
+    res.setHeader("Cache-Control", "no-store");
+
     return res.status(200).json({ message: "user logged out successfully" });
   } catch (error) {
     res.status(500).json({ message: "server error" });
