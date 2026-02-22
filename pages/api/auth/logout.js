@@ -15,14 +15,13 @@ export default async function handler(req, res) {
         httpOnly: true,
         // it means / in all of the site page can access and use.
         path: "/",
-        expires: new Date(0),
         // expire of cookie, according to seconds (0 remove).
         maxAge: 0,
+        expires: new Date(0),
         // prevent to CSRF attacks.
         sameSite: "lax",
         // for more security always https protocol.
-        secure: true,
-        domain: ".vercel.app",
+        secure: process.env.NODE_ENV === "production",
       }),
     );
     return res.status(200).json({ message: "user logged out successfully" });
