@@ -15,10 +15,11 @@ export default async function handler(req, res) {
         httpOnly: true,
         // it means / in all of the site page can access and use.
         path: "/",
+        expires: new Date(0),
         // expire of cookie, according to seconds (0 remove).
-        maxAge: -1,
+        maxAge: 0,
         // prevent to CSRF attacks.
-        sameSite: "strict",
+        sameSite: "lax",
         // for more security
         secure: true,
       }),
